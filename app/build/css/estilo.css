@@ -3,7 +3,7 @@
     text-decoration: none;
 }
 
-.item-video{
+.item-gif{
     min-width: 300px;
     max-width: 600px;
     width: 25%;
@@ -12,13 +12,13 @@
 }
 
 
-.item-video video{
+.item-gif img{
     height: 250px;
     display: block;
     border:1px solid #ddd;
     width: 100%;
 }
 
-.lista-video{
+.lista-gif{
     text-align: center;
 }
