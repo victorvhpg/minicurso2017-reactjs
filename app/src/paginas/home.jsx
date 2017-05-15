@@ -51,7 +51,7 @@ class Home extends Component{
                 <h4 style={{
                         textAlign: "center"
                     }}>
-                    Todos os Vídeos
+                    Todos os Gifs
                 </h4>
 
                 <ListaVideo list={this.state.listGif}/>
