@@ -1,6 +1,9 @@
 "use strict";
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+ //location.pathname
+var path =  window.location.pathname.indexOf("/minicurso2017-reactjs/app/build/") >= 0 ? "/minicurso2017-reactjs/app/build/" : "/"
+
 
 
 class Menu extends Component{
@@ -22,7 +25,7 @@ class Menu extends Component{
                     <Link
                         onClick={this.esconderMenu}
                         className="mdl-list__item"
-                        to={window.location.pathname}>
+                        to={path}>
                         <span className="mdl-list__item-primary-content">
                             <i className="material-icons mdl-list__item-icon">home</i>
                             Início
@@ -32,7 +35,7 @@ class Menu extends Component{
                     <Link
                         onClick={this.esconderMenu}
                         className="mdl-list__item"
-                        to={window.location.pathname + "favoritos" }>
+                        to={path + "favoritos" }>
                         <span className="mdl-list__item-primary-content">
                             <i className="material-icons mdl-list__item-icon">favorite</i>
                             Favoritos
@@ -41,7 +44,7 @@ class Menu extends Component{
                     <Link
                         onClick={this.esconderMenu}
                         className="mdl-list__item"
-                        to="/aliens">
+                        to={path + "aliens"}>
                         <span className="mdl-list__item-primary-content">
                             <i className="material-icons mdl-list__item-icon">bug_report</i>
                             Aliens
@@ -50,7 +53,7 @@ class Menu extends Component{
                     <Link
                         onClick={this.esconderMenu}
                         className="mdl-list__item"
-                        to={window.location.pathname + "/sobre"}>
+                        to={path + "sobre"}>
                         <span className="mdl-list__item-primary-content">
                             <i className="material-icons mdl-list__item-icon">info</i>
                             Sobre
