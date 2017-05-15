@@ -9,7 +9,7 @@ import Favoritos from './paginas/favoritos';
 
 var Erro404 = () => (<h2>Página não encontrada</h2>);
 
- 
+ //location.pathname
 class Rotas extends Component {
     render() {
         return (
