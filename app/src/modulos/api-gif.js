@@ -62,7 +62,7 @@ var apiGif = {
         //para fins de exemplo aqui sempre pega o mesmo json e  depois simula uma paginacao
         //o correto já é  receber da api o json paginado
         return new Promise(function(resolve, reject) {
-            ajax("http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit="+_QUANTIDADE_PAGINACAO+"&offset="+(paginacaoIndice * _QUANTIDADE_PAGINACAO)).then(function(list) {
+            ajax("https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit="+_QUANTIDADE_PAGINACAO+"&offset="+(paginacaoIndice * _QUANTIDADE_PAGINACAO)).then(function(list) {
                 resolve(
                     list.data
                 );
