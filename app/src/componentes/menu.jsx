@@ -22,7 +22,7 @@ class Menu extends Component{
                     <Link
                         onClick={this.esconderMenu}
                         className="mdl-list__item"
-                        to="/">
+                        to={window.location.pathname}>
                         <span className="mdl-list__item-primary-content">
                             <i className="material-icons mdl-list__item-icon">home</i>
                             Início
@@ -32,7 +32,7 @@ class Menu extends Component{
                     <Link
                         onClick={this.esconderMenu}
                         className="mdl-list__item"
-                        to="/favoritos">
+                        to={window.location.pathname + "favoritos" }>
                         <span className="mdl-list__item-primary-content">
                             <i className="material-icons mdl-list__item-icon">favorite</i>
                             Favoritos
@@ -50,7 +50,7 @@ class Menu extends Component{
                     <Link
                         onClick={this.esconderMenu}
                         className="mdl-list__item"
-                        to="/sobre">
+                        to={window.location.pathname + "/sobre"}>
                         <span className="mdl-list__item-primary-content">
                             <i className="material-icons mdl-list__item-icon">info</i>
                             Sobre

@@ -16,9 +16,9 @@ class Rotas extends Component {
             <BrowserRouter>
                 <Master >
                     <Switch>
-                        <Route exact path='/' component={Home} />
-                        <Route path="/sobre" component={Sobre} />
-                        <Route path="/favoritos" component={Favoritos} />
+                        <Route exact path={location.pathname} component={Home} />
+                        <Route path={location.pathname + "/sobre"} component={Sobre} />
+                        <Route path={location.pathname + "/favoritos"} component={Favoritos} />
                         <Route component={Erro404} />
                     </Switch>
                 </Master>
