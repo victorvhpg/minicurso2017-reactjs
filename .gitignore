@@ -1,0 +1,10 @@
+node_modules
+exemplos/app/node_modules
+exemplos/react-webpack/node_modules
+exemplos/helloworld/node_modules
+exemplos/md/node_modules
+exemplos/md/md/node_modules
+exemplos/helloworld-es6/node_modules
+exemplos/react-gulp/node_modules
+exemplos/exemplo1/node_modules
+app-exemplo/node_modules
