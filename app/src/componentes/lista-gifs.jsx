@@ -29,5 +29,4 @@ ListaVideo.propTypes = {
     list: PropTypes.any
 };
 
-
-module.exports = ListaVideo;
+export default ListaVideo;

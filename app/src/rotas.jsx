@@ -10,7 +10,7 @@ import Favoritos from './paginas/favoritos';
 var Erro404 = () => (<h2>Página não encontrada</h2>);
 
  //location.pathname
-var path =  window.location.pathname.indexOf("/minicurso2017-reactjs/app/build/") >= 0 ? "/minicurso2017-reactjs/app/build/" : "/"
+//var path =  window.location.pathname.indexOf("/minicurso2017-reactjs/app/build/") >= 0 ? "/minicurso2017-reactjs/app/build/" : "/"
 
 
 class Rotas extends Component {
@@ -19,9 +19,9 @@ class Rotas extends Component {
             <BrowserRouter>
                 <Master >
                     <Switch>
-                        <Route exact path={path} component={Home} />
-                        <Route path={path + "sobre"} component={Sobre} />
-                        <Route path={path + "favoritos"} component={Favoritos} />
+                        <Route exact path={"/"} component={Home} />
+                        <Route path={"/sobre"} component={Sobre} />
+                        <Route path={"/favoritos"} component={Favoritos} />
                         <Route component={Erro404} />
                     </Switch>
                 </Master>
@@ -29,5 +29,6 @@ class Rotas extends Component {
         );
     }
 };
+
 
 export default Rotas;
