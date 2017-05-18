@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, withRouter, Switch } from 'react-router-dom';
 import MenuDireita from "./menu-direita";
+//location.pathname
+var path = window.location.pathname.indexOf("/minicurso2017-reactjs/app/build/") >= 0 ? "/minicurso2017-reactjs/app/build/" : "/"
 
 class Topo extends Component {
 
@@ -9,7 +11,7 @@ class Topo extends Component {
 
     onPesquisar() {
 
-        this.props.history.push("/pesquisar");
+        this.props.history.push(path+ "pesquisar");
 
     }
 
