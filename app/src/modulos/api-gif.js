@@ -60,7 +60,7 @@ var apiGif = {
     },
 
     pesquisar: function (query, paginacaoIndice) {
-        var url = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + _KEY_API + "&limit=" + _QUANTIDADE_PAGINACAO + "&offset=" + (paginacaoIndice * _QUANTIDADE_PAGINACAO)
+        var url = "http://api.giphy.com/v1/gifs/search?q=" + query + "&lang=pt&api_key=" + _KEY_API + "&limit=" + _QUANTIDADE_PAGINACAO + "&offset=" + (paginacaoIndice * _QUANTIDADE_PAGINACAO)
         return new Promise(function (resolve, reject) {
             ajax(url).then(function (list) {
                 resolve(
@@ -71,7 +71,7 @@ var apiGif = {
     },
 
     getListGif: function (paginacaoIndice) {
-        var url = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=" + _QUANTIDADE_PAGINACAO + "&offset=" + (paginacaoIndice * _QUANTIDADE_PAGINACAO);
+        var url = "https://api.giphy.com/v1/gifs/trending?&lang=pt&api_key=" + _KEY_API + "&limit=" + _QUANTIDADE_PAGINACAO + "&offset=" + (paginacaoIndice * _QUANTIDADE_PAGINACAO);
         return new Promise(function (resolve, reject) {
             ajax(url).then(function (list) {
                 resolve(

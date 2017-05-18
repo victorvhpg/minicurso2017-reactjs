@@ -5,12 +5,12 @@ import Master from './componentes/master';
 import Home from './paginas/home';
 import Sobre from './paginas/sobre';
 import Favoritos from './paginas/favoritos';
-
+import Pesquisar from './paginas/pesquisar';
 
 var Erro404 = () => (<h2>Página não encontrada</h2>);
 
- //location.pathname
-//var path =  window.location.pathname.indexOf("/minicurso2017-reactjs/app/build/") >= 0 ? "/minicurso2017-reactjs/app/build/" : "/"
+//location.pathname
+var path = window.location.pathname.indexOf("/minicurso2017-reactjs/app/build/") >= 0 ? "/minicurso2017-reactjs/app/build/" : "/"
 
 
 class Rotas extends Component {
@@ -19,9 +19,11 @@ class Rotas extends Component {
             <BrowserRouter>
                 <Master >
                     <Switch>
-                        <Route exact path={"/"} component={Home} />
-                        <Route path={"/sobre"} component={Sobre} />
-                        <Route path={"/favoritos"} component={Favoritos} />
+                        <Route exact path={path} component={Home} />
+                        <Route path={path + "sobre"} component={Sobre} />
+                        <Route path={path + "favoritos"} component={Favoritos} />
+                        <Route path={path + "pesquisar"} component={Pesquisar} />
+
                         <Route component={Erro404} />
                     </Switch>
                 </Master>

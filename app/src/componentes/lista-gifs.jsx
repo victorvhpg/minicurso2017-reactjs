@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ItemVideo from "./item-gif";
+import ItemGif from "./item-gif";
 
-class ListaVideo extends Component{
-    
+class ListaGif extends Component{
+
 
     render  () {
 
@@ -13,7 +13,7 @@ class ListaVideo extends Component{
             <div className="lista-gif">
                 {this.props.list.map(function (item,indice) {
                     return (
-                        <ItemVideo
+                        <ItemGif
                             key={indice}
                             item={item}
                         />
@@ -25,8 +25,8 @@ class ListaVideo extends Component{
 };
 
 
-ListaVideo.propTypes = {
+ListaGif.propTypes = {
     list: PropTypes.any
 };
 
-export default ListaVideo;
+export default ListaGif;

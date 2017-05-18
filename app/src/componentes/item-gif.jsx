@@ -4,18 +4,18 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import apiGif from "../modulos/api-gif";
 
-class ItemVideo extends Component {
+class ItemGif extends Component {
     constructor(props) {
         super(...props);
-        this.state = {                 
+        this.state = {
             isFavorito: false
         };
     }
-   
+
     componentDidMount() {
         this.setState({
             isFavorito: apiGif.isFavorito(this.props.item.id)
-        });      
+        });
     }
 
     onFavorito() {
@@ -47,10 +47,10 @@ class ItemVideo extends Component {
                     position: "relative",
                     backgroundColor: "#000"
                 }}>
-                    <img                                      
+                    <img
                         src={"http://i.giphy.com/"+this.props.item.id+".gif"}>
                     </img>
- 
+
                 </div>
                 <div className="mdl-card__supporting-text">
                     {this.props.item.user && this.props.item.user.username}
@@ -76,9 +76,9 @@ class ItemVideo extends Component {
 };
 
 
-ItemVideo.propTypes = {
+ItemGif.propTypes = {
     item: PropTypes.any
 };
 
 
-export default ItemVideo;
+export default ItemGif;
